@@ -1,0 +1,5 @@
+require "minitest/autorun"
+require "./lib/ingredient.rb"
+require "./lib/recipe.rb"
+require "./lib/pantry.rb"
+require "./lib/cook_book.rb"

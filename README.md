@@ -17,7 +17,6 @@ Use TDD to build an `Ingredient` class with the following attributes:
 * `name` - the name of the ingredient
 * `unit` - the unit in which the ingredient is measured
 * `calories` - the amount of calories per unit of the ingredient.
-
 ## Iteration 2
 
 Use TDD to build a `Recipe` class that responds to the following:
@@ -25,7 +24,7 @@ Use TDD to build a `Recipe` class that responds to the following:
 * The recipe should have a name and way to read that data.
 * The recipe should be able to add ingredients and quantity needed for the recipe. Use the method name `add_ingredient` and have it take 2 arguments.
 * The recipe should be able to list all of its ingredients.
-* The recipe should be able to check the quantity needed of a given ingredient to make that recipe. 
+* The recipe should be able to check the quantity needed of a given ingredient to make that recipe.
 * The recipe should be able to find the total number of calories in that dish.
 
 
