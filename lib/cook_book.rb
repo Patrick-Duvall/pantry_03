@@ -9,18 +9,21 @@ class CookBook
   end
 
   def recipe_summary(recipe)
-    require "pry"; binding.pry
-    x = recipe.ingredients.sort_by{|k,v| k.calories_per_unit * v}.reverse.map{|ing| {ingredient: ing[0].name, amount: ing[1].to_s + ' ' + ing[0].unit.to_s}}
-    # require "pry"; binding.pry
-    {
+    sorted = recipe.ingredients.sort_by{|k,v| k.calories_per_unit * v}.reverse
+    ingredient_details = sorted.map do|ing|
+       {
+         ingredient: ing[0].name,
+         amount: ing[1].to_s + ' ' + ing[0].unit.to_s
+       }
+     end
+     return {
       name: recipe.name,
       :details => {
         ingredients:
-        x,
+        ingredient_details,
         total_calories: recipe.total_calories
       }
-
-      }
+    }
   end
 
   def summary
